@@ -1,0 +1,12 @@
+query:
+  profiles.active: local
+  
+---
+
+query:
+  profiles: local
+  docbaseParamDql: select data_ticket, dos_extension, file_system_path, r_docbase_id from dmr_content c, dm_format f, dm_filestore fs, dm_location l, dm_docbase_config dc where any c.parent_id = 'parentId' and f.r_object_id = c.format and fs.r_object_id = c.storage_id and l.object_name = fs.root
+  folderIdDql: select r_object_id from dm_folder where object_name='Temp'
+  contentTypeDql: select name from dm_format where mime_type=
+  documentsQuery:
+  uploadDocHistoryQuery: 

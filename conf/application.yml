@@ -1,0 +1,64 @@
+spring:
+  profiles.active: local
+jasypt:
+  profiles.active: local
+  
+---
+
+spring:
+  profiles: development
+  datasource:
+    db:
+      url: jdbc:sqlserver://10.88.89.207/SQLK2;databaseName=K2DMS
+      username: sa
+      password: 2qVUNy//PHDCmtSdZVq6TqOFgijXNMdF
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:      
+    databasePlatform: org.hibernate.dialect.SQLServerDialect
+    database: SQL_SERVER
+    openInView: false
+    showSql: true
+    generateDdl: false
+    
+share-folder:
+  profiles: development
+  domain: 10.88.89.203
+  name: file
+  user: Administrator
+  pass: 2qVUNy//PHDCmtSdZVq6TqOFgijXNMdF
+
+scheduler:
+  cronExpression: 1 * * * * *
+
+---
+
+spring:
+  profiles: local
+  datasource:
+    db:
+      url: jdbc:sqlserver://10.88.88.141;databaseName=K2DMS
+      username: sa
+      password: 2qVUNy//PHDCmtSdZVq6TqOFgijXNMdF
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:      
+    databasePlatform: org.hibernate.dialect.SQLServerDialect
+    database: SQL_SERVER
+    openInView: false
+    showSql: true
+    generateDdl: false
+
+jasypt:
+  profiles: local
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    password: test
+    
+share-folder:
+  profiles: local
+  domain: 10.88.88.141
+  name: dms_req_upload
+  user: Administrator
+  pass: adnz3Ffhx5I9z3otbh+toDqHUM0E7/Ny
+  
+scheduler:
+  cronExpression: 1 * * * * *

@@ -1,0 +1,44 @@
+dctm-rest:
+  profiles.active: test
+
+---
+
+dctm-rest:
+  profiles: dev
+  user: dctmadmin
+  pass: 2qVUNy//PHDCmtSdZVq6TqOFgijXNMdF
+  url: http://10.88.89.202:8080/dctm-rest
+  repositoryName: BFI_POC_DEV
+  socketTimeout: 12000
+  connectTimeout: 3000
+  readTimeout: 3000
+  connectionRequestTimeout: 3000
+  specificDocbaseId: 00027560
+  contentType: application/vnd.emc.documentum+json
+  consumerDocCabinetName: Dokumen Konsumen
+  internalDocCabinetName: Dokumen Internal
+  dmsActiveDocFolderName: Dokumen Aktif
+  dmsInactiveDocFolderName: Dokumen Non Aktif
+  
+---
+
+dctm-rest:
+  profiles: test
+  user: Administrator
+  pass: 2qVUNy//PHDCmtSdZVq6TqOFgijXNMdF
+  url: http://10.88.88.141:8080/dctm-rest
+  repositoryName: Base_Repo
+  socketTimeout: 12000
+  connectTimeout: 3000
+  readTimeout: 3000
+  connectionRequestTimeout: 3000
+  specificDocbaseId: 00027560
+  contentType: application/vnd.emc.documentum+json
+  consumerDocCabinetName: Dokumen Konsumen
+  internalDocCabinetName: Dokumen Internal
+  dmsProcessNameConsumer: CUSTOMER E-DOC
+  dmsProcessNameInternal: INTERNAL DOC
+  dmsActiveDocFolderName: Dokumen Aktif
+  dmsInactiveDocFolderName: Dokumen Non Aktif
+  
+
